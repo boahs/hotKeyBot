@@ -14,7 +14,7 @@ const r = new Snoowrap({
     password: process.env.REDDIT_PASS
 });
 
-const stream = new CommentStream(r, { subreddit: "all", results: 25 });
+const stream = new CommentStream(r, { subreddit: "all", limit: 25 });
 stream.on("item", comment => {
     console.log(comment)
 });
